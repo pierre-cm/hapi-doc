@@ -5,7 +5,8 @@
 }
 .Markdown{
     padding: 2rem;
-    width: 60rem;
+    max-width: 60rem;
+    min-width: 0;
     h1{
         font-size: 2.5rem;
         font-weight: 500;
