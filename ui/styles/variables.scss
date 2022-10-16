@@ -1,0 +1,14 @@
+$blue: #65a3ff;
+$green: #7cd56c;
+$yellow: #ffca52;
+$red: #ff6b6b;
+
+$primary: #ed7d31;
+$link: $primary;
+$info: $blue;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/utilities/_all.sass";

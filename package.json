@@ -1,0 +1,61 @@
+{
+  "name": "hapi-doc",
+  "version": "1.0.0",
+  "description": "hapi documentation UI plugin",
+  "keywords": [
+    "hapi-doc",
+    "hapi doc",
+    "hapi",
+    "documentation",
+    "ui",
+    "plugin",
+    "api",
+    "swagger"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Pierre Caillaud Menéndez",
+    "email": "pcaillaudm@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierre-cm/hapi-doc"
+  },
+  "homepage": "http://pierre-cm.github.io/hapi-doc",
+  "bugs":{
+    "url": "https://github.com/pierre-cm/hapi-doc/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.esm.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite ./ui",
+    "build:ui": "vite build ./ui",
+    "build": "yarn build:ui && rollup -c"
+  },
+  "dependencies": {
+    "joi-openapi": "^3.1.3"
+  },
+  "devDependencies": {
+    "@creativebulma/bulma-tooltip": "^1.2.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-json": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "bulma": "^0.9.4",
+    "dompurify": "^2.4.0",
+    "highlight.js": "^11.6.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "marked": "^4.1.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.55.0",
+    "solid-js": "^1.5.1",
+    "vite": "^3.0.9",
+    "vite-plugin-solid": "^2.3.0"
+  }
+}

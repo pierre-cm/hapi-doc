@@ -1,0 +1,108 @@
+@import "../../styles/variables.scss";
+
+#hapi-doc{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+h1{
+    font-size: 2rem;
+    margin: 1rem à 1rem 0;
+}
+h2{
+    font-size: 1.25rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.List{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ListItemHeader{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    .Left{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .ItemDescription{
+            color: #8d8d8d;
+        }
+    }
+    .Right{
+        .card-header-icon{
+            padding: 0;
+            justify-self: flex-end;
+        }
+    }
+}
+.PathParam{
+    color: $primary;
+}
+.tag.method{
+    width:5rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: $body-color;
+    border: 3px solid;
+}
+.tag.method.m_get{border-color: $blue;color: $blue}
+.tag.method.m_post{border-color: $green;color: $green}
+.tag.method.m_put{border-color: $yellow;color: $yellow}
+.tag.method.m_delete{border-color: $red;color: $red}
+.ListItemContent{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    div{
+        flex-grow: 1;
+        min-width: calc(50% - 0.5rem);
+    }
+    table{
+        th{
+            font-weight: normal;
+            background-color: #f5f5f5;
+        }
+        td.Param{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: space-between;
+        }
+    }
+}
+.RequiredIcon{
+    ion-icon{
+        pointer-events: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: fit-content;
+    color: $red;
+}
+.EmptyMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $grey;
+}
+.CodeBlock{
+    max-height: 20rem;
+    min-width: 0;
+}
+span.hljs-attr{color: $primary}
+span.hljs-literal{color: #ff2626;}
+span.hljs-string{color: #7e7e7e;}
+span.hljs-number{color: #009fdd;}
