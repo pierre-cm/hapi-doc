@@ -2,7 +2,7 @@ import css from './Example.module.scss'
 
 function Example() {
   return (
-    <iframe src='/doc_example/index.html' class={css.Iframe}/>
+    <iframe src='https://pierre-cm.github.io/hapi-doc/doc_example/index.html' class={css.Iframe}/>
   )
 }
   
