@@ -13,16 +13,13 @@
     "swagger"
   ],
   "license": "MIT",
-  "author": {
-    "name": "Pierre Caillaud Menéndez",
-    "email": "pcaillaudm@gmail.com"
-  },
+  "author": "Pierre Caillaud Menéndez <pcaillaudm@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierre-cm/hapi-doc"
+    "url": "git+https://github.com/pierre-cm/hapi-doc.git"
   },
   "homepage": "http://pierre-cm.github.io/hapi-doc",
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/pierre-cm/hapi-doc/issues"
   },
   "main": "./dist/index.js",
@@ -57,5 +54,8 @@
     "solid-js": "^1.5.1",
     "vite": "^3.0.9",
     "vite-plugin-solid": "^2.3.0"
+  },
+  "directories": {
+    "doc": "doc"
   }
 }
