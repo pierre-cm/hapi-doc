@@ -1,6 +1,6 @@
 # hapi-doc
 
-#### Generates API documentation UI
+Create an API documentation endpoint for your hapi application
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
@@ -12,7 +12,9 @@
 
 **hapi-doc** is a plugin for [hapi][hapi] which generate an API documentation based on hapi's routes settings.
 
-![overview](doc/ui_overview.png)
+> A demo is accessible [here][demo]!
+
+![overview](https://raw.githubusercontent.com/pierre-cm/hapi-doc/main/doc/ui_overview.png)
 
 ## Installation
 
@@ -30,7 +32,7 @@ $ yarn add hapi-doc
 
 ## Usage
 
-#### Import
+### Import
 
 Using CommonJS:
 
@@ -43,7 +45,7 @@ Using ESM:
 import hapidoc from 'hapi-doc'
 ```
 
-#### Create hapi server
+### Create hapi server
 
 Afterwards create your hapi server if not already done:
 
@@ -53,7 +55,7 @@ const hapi = require("@hapi/hapi")
 const server = hapi.server({ port: 8080 })
 ```
 
-#### Registration
+### Registration
 
 Finally register the plugin. Available `options` are described in the next section.
 
@@ -61,7 +63,7 @@ Finally register the plugin. Available `options` are described in the next secti
 await server.register({ plugin: hapidoc, options })
 ```
 
-#### Options
+### Options
 
 | name | description | default | 
 | :- | :- | :- |
@@ -84,7 +86,7 @@ let options = {
 }
 ```
 
-#### Configure
+### Configure
 
 hapi-doc will observe server's routes options in order to build the API model. Here are the following routes options that are used.
 > The schema description for request and response objects must be done using [Joi][joi].
@@ -100,7 +102,9 @@ hapi-doc will observe server's routes options in order to build the API model. H
 | route.options.validate.payload | Joi object representing request body parameters | 
 | route.options.response.status | key-value object where keys must be a valid HTTP status code and the value the Joi object representation of the response | 
 
+
 Here is an example of hapi route configuration and the corresponding documentation endpoint generated.
+
 
 ```js
 server.route({
@@ -132,9 +136,11 @@ server.route({
   }
 })
 ```
-![routeExample](doc/route_example.png)
+
+![routeExample](https://raw.githubusercontent.com/pierre-cm/hapi-doc/main/doc/route_example.png)
 
 [hapi]: https://hapi.dev/
+[demo]: https://pierre-cm.github.io/hapi-doc/example
 [npm]: https://github.com/npm/npm/
 [yarn]: https://yarnpkg.com/
 [joi]: https://joi.dev/
