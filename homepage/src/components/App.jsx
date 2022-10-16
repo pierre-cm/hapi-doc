@@ -1,4 +1,3 @@
-import { createSignal, createEffect } from 'solid-js'
 import { Routes, Route } from '@solidjs/router'
 
 import './App.scss'

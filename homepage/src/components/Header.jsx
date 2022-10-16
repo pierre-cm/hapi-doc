@@ -23,7 +23,7 @@ function Header() {
         <div id='navbarBasicExample' class='navbar-menu'>
             <div class='navbar-start'>
             <A class='navbar-item' href='/' >Home</A>
-            <A class='navbar-item' href='/doc' >Documentation</A>
+            {/* <A class='navbar-item' href='/doc' >Documentation</A> */}
             <A class='navbar-item' href='/example' >Example</A>
             </div>
         </div>
