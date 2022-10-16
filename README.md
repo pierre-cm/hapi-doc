@@ -84,6 +84,57 @@ let options = {
 }
 ```
 
+#### Configure
+
+hapi-doc will observe server's routes options in order to build the API model. Here are the following routes options that are used.
+> The schema description for request and response objects must be done using [Joi][joi].
+
+| name | description |  
+| :- | :- |
+| route.method | endpoint method | 
+| route.path | endpoint path | 
+| route.options.tags | list of tags | 
+| route.options.description | description of the endpoint | 
+| route.options.validate.params | Joi object representing path parameters | 
+| route.options.validate.query | Joi object representing query parameters | 
+| route.options.validate.payload | Joi object representing request body parameters | 
+| route.options.response.status | key-value object where keys must be a valid HTTP status code and the value the Joi object representation of the response | 
+
+Here is an example of hapi route configuration and the corresponding documentation endpoint generated.
+
+```js
+server.route({
+  method: 'PUT',
+  path: '/users/{userId}',
+  handler: async (req, h) => {},
+  options:{
+    tags: ['users'],
+    description: 'Update a user',
+    validate:{
+      params: Joi.object({
+        userId: Joi.string()
+          .guid({version:'uuidv4'})
+          .description('Id of the user')
+          .required()
+      }), 
+      payload: Joi.object({
+        email: Joi.string().regex(EMAIL_RGX),
+        password: Joi.string(),
+        bio: Joi.string()
+      })
+    },
+    response:{
+      status:{
+        200: Joi.string().description('successful operation'),
+        404: Joi.string().description('user not found'),
+      }
+    }
+  }
+})
+```
+![routeExample](doc/route_example.png)
+
 [hapi]: https://hapi.dev/
 [npm]: https://github.com/npm/npm/
 [yarn]: [https://yarnpkg.com/]
+[joi]: [https://joi.dev/]
