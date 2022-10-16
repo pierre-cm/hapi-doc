@@ -5,11 +5,6 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [API](#api)
-5. [Example](#example)
-6. [Migration Guides](#migration-guides)
-7. [Developing and Testing](#developing-and-testing)
-8. [Contribution](#contribution)
 
 ---
 
