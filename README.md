@@ -140,7 +140,7 @@ server.route({
 ![routeExample](https://raw.githubusercontent.com/pierre-cm/hapi-doc/main/doc/route_example.png)
 
 [hapi]: https://hapi.dev/
-[demo]: https://pierre-cm.github.io/hapi-doc/example
+[demo]: https://pierre-cm.github.io/hapi-doc/doc_example/index.html
 [npm]: https://github.com/npm/npm/
 [yarn]: https://yarnpkg.com/
 [joi]: https://joi.dev/
