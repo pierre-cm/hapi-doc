@@ -136,5 +136,5 @@ server.route({
 
 [hapi]: https://hapi.dev/
 [npm]: https://github.com/npm/npm/
-[yarn]: [https://yarnpkg.com/]
-[joi]: [https://joi.dev/]
+[yarn]: https://yarnpkg.com/
+[joi]: https://joi.dev/
